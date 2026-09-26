@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background: whitesmoke;
+    color: #003366 ;
+}
+header{
+    background: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+main{
+    text-align: center;
+    padding:50px;
+}
+main h1{
+    font-size: 45px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+.welcome-card{
+    background: #e8f1ff;
+    width: 50%;
+    margin: 20px, auto;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+}
+.cards{
+    background: #e8f1ff;
+    padding: 90px, 50px;
+}
+.boxes{
+     background: #e8f1ff;
+    width: 50%;
+    text-align: center;
+    padding: 40px 20px;
+}
+.card {
+    font-size: 20px;
+    color: #003366;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+    cursor: default;
+}
+.card{
+    transition: 0.3s;
+}
+.card:hover{
+    transform: translate(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.boxes{
+    display:flex;
+    gap: 80px;
+    background: #e8f1ff;
+    width: 100%;
+    margin: 50px, auto;
+    border-radius: 5px;
+    text-align: center;
+    padding: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main p{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}.bottom-nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+}
+.bottom-nav img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+.bottom-nav span {
+    display: block;
+    font-size: 15px;
+    color: blue;
+}
+.bottom-nav a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+}
