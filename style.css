@@ -277,12 +277,10 @@ header img{
     margin: 60px, 30px;
 }
 
-/* Make sizing easier to manage */
-* {
-    box-sizing: border-box;
-}
+/* =================================
+   LUMIORA: MOBILE RESPONSIVENESS
+================================= */
 
-/* Prevent unwanted horizontal scrolling */
 html {
     width: 100%;
     overflow-x: hidden;
@@ -290,110 +288,152 @@ html {
 
 body {
     width: 100%;
-    min-height: 100vh;
-    margin: 0;
+    min-width: 320px;
     overflow-x: hidden;
-    font-family: Arial, sans-serif;
 }
 
-/* Make images fit their containers */
+/* Header */
+header {
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+nav a {
+    margin-left: 0;
+}
+
+/* Main content */
+main {
+    padding: 30px 15px;
+}
+
+main h2 {
+    font-size: clamp(26px, 5vw, 45px);
+}
+
+main h3 {
+    font-size: clamp(23px, 5vw, 40px);
+}
+
+/* Welcome card */
+.welcome-card {
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Features and cards */
+.cards {
+    width: 90%;
+    max-width: 1100px;
+    gap: 20px;
+}
+
+.card {
+    width: min(100%, 250px);
+}
+
+/* Signup and login forms */
+.Signup form,
+.login form {
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Images */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Make form elements fit their containers */
-input,
-select,
-textarea,
-button {
-    max-width: 100%;
-    font: inherit;
-}
+/* Smaller screens */
+@media screen and (max-width: 600px) {
 
-/* Keep common content within the screen */
-.container,
-.wrapper,
-.card,
-.form-container {
-    max-width: 100%;
-}
-
-/* Tablets and smaller screens */
-@media screen and (max-width: 768px) {
-
-    body {
-        font-size: 15px;
+    header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
     }
 
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 23px;
-    }
-
-    h3 {
-        font-size: 19px;
-    }
-
-    .container,
-    .wrapper,
-    .card,
-    .form-container {
-        max-width: 100%;
-    }
-
-    input,
-    select,
-    textarea {
+    nav {
         width: 100%;
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-/* Mobile phones */
-@media screen and (max-width: 480px) {
-
-    body {
+    nav a {
         font-size: 14px;
     }
 
-    h1 {
-        font-size: 24px;
+    main {
+        padding: 20px 12px;
     }
 
-    h2 {
-        font-size: 20px;
+    .hero {
+        padding: 35px 12px;
     }
 
-    h3 {
-        font-size: 17px;
-    }
-
-    button {
-        max-width: 100%;
-        padding: 10px 16px;
-    }
-
-    input,
-    select,
-    textarea {
+    .welcome-card {
         width: 100%;
+        margin: 20px auto;
+        padding: 20px 12px;
+    }
+
+    .cards {
+        width: 100%;
+        padding: 15px 10px;
+        margin: 20px auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .features {
+        padding: 20px 10px;
+    }
+
+    .cta {
+        padding: 25px 12px;
+    }
+
+    .cta p {
         padding: 10px;
     }
 
-    .container,
-    .wrapper,
-    .card,
-    .form-container {
+    .Signup form,
+    .login form {
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .bottom-nav {
+        padding: 10px 0;
+    }
+
+    .bottom-nav span {
+        font-size: 12px;
+    }
+
+    .bottom-nav img {
+        width: 22px;
+        height: 22px;
+    }
+
+    main h2 {
+        font-size: 28px;
+    }
+
+    main h3 {
+        font-size: 25px;
+        padding: 10px;
     }
 }
